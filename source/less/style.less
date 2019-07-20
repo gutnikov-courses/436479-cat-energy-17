@@ -1,6 +1,4 @@
 @import "debug";
-@import "reset";
-
 @import "blocks/top-nav";
 @import "blocks/nav-menu";
 @import "blocks/request-plan";
@@ -9,10 +7,37 @@
 @import "blocks/footer";
 @import "blocks/catalog";
 
+// Resets
 * {
   box-sizing: border-box;
 }
 
+ol,
+ul,
+li,
+body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+button,
+input,
+select,
+textarea {
+  font-size: 100%; /* 1 */
+  margin: 0; /* 2 */
+  vertical-align: baseline; /* 3 */
+}
+
+//
 .clearfix::after {
   content: "";
   clear: both;
@@ -33,8 +58,5 @@
 
 body {
   font-size: 14px;
-  font-family: Arial, sans-serif;
-  font-weight: normal;
-  font-style: normal;
-  font-stretch: normal;
+  font-family: "Arial", sans-serif;
 }
