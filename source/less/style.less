@@ -1,1 +1,40 @@
-body { background-color: red; }
+@import "debug";
+@import "reset";
+
+@import "blocks/top-nav";
+@import "blocks/nav-menu";
+@import "blocks/request-plan";
+@import "blocks/program";
+@import "blocks/how-it-works";
+@import "blocks/footer";
+@import "blocks/catalog";
+
+* {
+  box-sizing: border-box;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+@font-face {
+  font-family: "OswaldMedium";
+  src: url("/fonts/oswaldmedium.woff");
+  src: url("/fonts/oswaldmedium.woff2");
+}
+
+@font-face {
+  font-family: "OswaldRegular";
+  src: url("/fonts/oswaldregular.woff");
+  src: url("/fonts/oswaldregular.woff2");
+}
+
+body {
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+}
