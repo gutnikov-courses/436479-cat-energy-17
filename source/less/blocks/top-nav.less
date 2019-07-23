@@ -1,8 +1,65 @@
 .top-nav {
   font-family: "OswaldMedium", "Arial", sans-serif;
-  font-size: 142%;
+  font-size: 20px;
   color: #111111;
   border-bottom: 1px solid grey;
-  padding: 10px 20px;
   text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+}
+
+.top-nav__main {
+  display: flex;
+  flex-direction: column;
+
+  // debug
+  .outline(red);
+}
+
+.top-nav__items {
+  display: flex;
+  flex-direction: column;
+
+  // debug
+  .outline(yellow);
+}
+
+.top-nav__item {
+  // debug
+  min-height: 66px;
+  flex-grow: 1;
+}
+
+@media (min-width: @tablet-width) {
+  .top-nav {
+    flex-direction: row;
+    border-bottom: none;
+    padding: 0 10px;
+  }
+
+  .top-nav__items {
+    flex-direction: row;
+    margin-left: auto;
+  }
+
+  .top-nav__item {
+    // debug
+    min-height: 110px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .top-nav {
+    padding: 0 80px;
+  }
+
+  .top-nav__items {
+    flex-direction: row;
+    margin-left: auto;
+  }
+
+  .top-nav__item {
+    // debug
+    min-height: 170px;
+  }
 }

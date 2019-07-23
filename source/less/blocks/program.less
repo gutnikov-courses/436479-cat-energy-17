@@ -2,10 +2,63 @@
   padding: 20px;
 }
 
-.program__entry {
+.program__list {
+  display: flex;
+  flex-direction: column;
+}
+
+.program-item {
   color: #444444;
   line-height: 18px;
   padding: 20px;
-  background-color: lightgrey;
+  //background-color: lightgrey;
+
+  // debug
+  .outline(brown);
+  min-height: 255px;
+}
+
+.program__list-item {
   margin-bottom: 25px;
+}
+
+.program__list-item:last-child {
+  margin-bottom: 0;
+}
+
+@media (min-width: @tablet-width) {
+  .program {
+    padding: 30px;
+  }
+
+  .program-item {
+    color: #444444;
+    line-height: 18px;
+    padding: 20px;
+    background-color: lightgrey;
+
+    // debug
+    .outline(brown);
+    min-height: 385px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .program {
+    padding: 75px 110px;
+  }
+
+  .program__list {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .program-item {
+    // debug
+    min-width: 570px;
+  }
+
+  .program__list-item {
+    margin-bottom: 0;
+  }
 }

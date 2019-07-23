@@ -7,6 +7,22 @@
   background-size: contain;
   background-repeat: no-repeat;
   text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  min-height: 490px;
+}
+
+.request-plan__form {
+  // debug
+  .outline(blue);
+}
+
+.request-plan__pic {
+  // debug
+  .outline(red);
+  min-height: 280px;
+  margin-top: -85px;
 }
 
 .request-plan__header {
@@ -14,5 +30,44 @@
 }
 
 .request_plan__subtitle {
-  font-size: 13.5px;
+  font-size: 14px;
+}
+
+@media (min-width: @tablet-width) {
+  .request-plan {
+    background-image: none;
+    color: #111111;
+  }
+
+  .request-plan__form {
+    // debug
+    min-height: 350px;
+  }
+
+  .request-plan__pic {
+    // debug
+    min-height: 600px;
+    margin-top: -200px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .request-plan {
+    flex-direction: row;
+    margin-top: -170px;
+    min-height: 700px;
+  }
+
+  .request-plan__form {
+    // debug
+    min-width: 750px;
+  }
+
+  .request-plan__pic {
+    // debug
+    min-height: 600px;
+    margin-top: 0;
+    min-width: 500px;
+    margin-left: -150px;
+  }
 }
